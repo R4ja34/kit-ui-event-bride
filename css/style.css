@@ -157,16 +157,96 @@ footer a:hover {
   text-decoration: underline; /* Ajouter une soulignement au survol du lien */
 }
 
-.carousel h5 {
-  display: inline-block;
-  padding: 10px;
-  background: #B9121B;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.carousel .full-screen {
-  background-size: cover;
-  background-position: center;
+.form-container {
+  background-color: var(--primary);
+  border: 15px solid var(--secondary);
+  border-radius: 20px;
+  width: 500px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+
+form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 83px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+form div > label {
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+form div > input, form div > select, form div > textarea {
+  background: var(--secondary);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Montserrat, "sans-serif";
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+}
+
+form div > input, form div > select {
+  height: 45px;
+  width: 290px;
+  padding-left: 10px;
+}
+
+form div > select {
+  appearance: none;
+  background-size: 15px;
+  background-position: right 10px top 50%;
   background-repeat: no-repeat;
+}
+
+form div > textarea {
+  height: 195px;
+  padding: 15px 0px 0px 10px;
+  width: 340px;
+}
+
+form div > input::placeholder, form div > textarea::placeholder {
+color: var(--secondary);
+}
+
+form div > select:invalid {
+color: var(--secondary);
+}
+
+form div > select option {
+background: var(--secondary);
+color: var(--text-secondary);
+}
+
+form div:last-child {
+align-items:center;
+margin-top: 20px;
+}
+
+form button {
+width: 450px;
+max-width: 500px;
+height: 60px;
+font-weight: 700;
+font-size: 28px;
+background: var(--secondary);
+border: var(--primary) solid 1px;
+border-radius: 5px;
+box-shadow: 0px 4px 4px 0px var(--accent);
+color: #303030;
 }
